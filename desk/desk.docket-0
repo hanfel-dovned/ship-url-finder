@@ -1,0 +1,9 @@
+:~  title+'Ship URL Getter'
+    info+'Find the URL of ships'
+    color+0x77.7777
+    base+'ship-url-getter'
+    site+/apps/ship-url-getter
+    version+[0 1 0]
+    website+'https://x.com/hanfel_dovned'
+    license+'MIT'
+==

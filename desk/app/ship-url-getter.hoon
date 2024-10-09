@@ -111,11 +111,15 @@
       =/  c=(cask)  (need q.dat.roar)
       ::  c should be a [%cord *]
       =/  url=@t  (need ;;((unit @t) +.c))
+      =/  =header-list:http  
+        :~  'Access-Control-Allow-Origin'^'*' 
+            'Content-Type'^'application/json'
+        ==
       =+  send=(cury response:schooner eyre-id)
       %-  emil
       %-  flop
       %-  send
-      [200 ~ [%plain (trip url)]]
+      [200 header-list [%json s+url]]
     ==
   ==
 --

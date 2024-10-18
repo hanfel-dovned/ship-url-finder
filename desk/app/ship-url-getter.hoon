@@ -115,11 +115,24 @@
         :~  'Access-Control-Allow-Origin'^'*' 
             'Content-Type'^'application/json'
         ==
+      =/  rift
+        .^  @ud 
+            %j 
+            %+  en-beam 
+              [our.bowl %rift [%da now.bowl]] 
+            /(scot %p ship)
+        ==
       =+  send=(cury response:schooner eyre-id)
       %-  emil
       %-  flop
       %-  send
-      [200 header-list [%json s+url]]
+      :+  200 
+        header-list
+      :-  %json
+      %-  pairs:enjs:format
+      :~  [%url s+url]
+          [%rift s+(scot %ud rift)]
+      ==
     ==
   ==
 --
